@@ -1,0 +1,13 @@
+{% apply inline_css %}
+<style>
+    h1 {
+        color: #7700d8;
+    }
+</style>
+
+<h1>Un nouvel avis a été déposer</h1>
+
+<br />Nom: {{nom}}
+<br />Message:
+<br />{{message | nl2br }}
+<br />Note: {{note | nl2br }} {% endapply %}

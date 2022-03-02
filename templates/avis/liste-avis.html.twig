@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %} {% block title %}{{parent()}}Liste des Avis{% endblock %} {% block body %}
+
+<div class="container-fluid">
+    <h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold">
+        Liste des Avis Déposer</h1>
+
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 bg-white p-4 m-0 text-primary">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="fw-bold text-primary">
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prenom</th>
+                            <th scope="col">Message</th>
+                            <th scope="col">Note sur 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for avis in avis %}
+                        <tr class="{{ cycle(['table-primary', 'table-secondary'], loop.index0) }}">
+                            <td>{{ avis.nom | capitalize }}</td>
+                            <td>{{ avis.prenom | capitalize }}</td>
+                            <td>{{ avis.message | lower }}</td>
+                            <td>{{ avis.note | capitalize }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

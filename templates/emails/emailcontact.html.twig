@@ -1,0 +1,13 @@
+{% apply inline_css %}
+<style>
+    h1 {
+        color: #7700d8;
+    }
+</style>
+
+<h1>Vous avez un nouveau contact</h1>
+
+<br />Nom: {{nom}}
+<br />Sujet: {{sujet}}
+<br />Message:
+<br />{{message | nl2br }} {% endapply %}

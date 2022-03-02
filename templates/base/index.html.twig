@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %} {% block title %}{{parent()}}Accueil{% endblock %} {% block body %}
+
+<header style=>
+    <img alt="image" src="https://shopping-arraspaysdartois.fr/wp-content/uploads/2021/03/arras-slide-03-desktop-1720x550.jpg" width="100%" height="100%">
+</header>
+
+<br>
+
+<div class="d-grid gap-2">
+    <a class="btn btn-lg btn-primary" href="{{path('liste-avis')}}">Consulter la liste des Avis</a>
+</div>
+
+{% endblock %}
